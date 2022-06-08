@@ -54,15 +54,15 @@ beta 빌드에 대한 구성을 하고 싶다면 다음과 같이 `beta` 블럭�
 
 ```groovy
 android {
-    ...
+    // ...
     buildTypes {
-        ...
+        // ...
         beta {
             minifyEnabled false
             applicationIdSuffix ".beta"
         }
     }
-    ...
+    // ...
 }
 ```
 
@@ -76,7 +76,7 @@ Product Flavor는 `buildTypes`와 유사하지만, 실제 유저와 관련된 �
 
 ```groovy
 android {
-    ...
+    // ...
     flavorDimensions "paidMode"
     productFlavors {
         free {
@@ -88,7 +88,7 @@ android {
             applicationIdSuffix ".paid"
         }
     }
-    ...
+    // ...
 }
 ```
 
@@ -98,7 +98,7 @@ android {
 
 ```
 android {
-    ...
+    // ...
     flavorDimensions "paidMode", "minSdk"
     productFlavors {
         free {
@@ -118,7 +118,7 @@ android {
             minSdk 21
         }
     }
-    ...
+    // ...
 }
 ```
 
@@ -126,7 +126,7 @@ android {
 
 ```groovy
 dependencies {
-    ...
+    // ...
     freeMinSdk21DebugImplementation 'androidx.compose.ui:ui-tooling:1.1.1'
 }
 ```
