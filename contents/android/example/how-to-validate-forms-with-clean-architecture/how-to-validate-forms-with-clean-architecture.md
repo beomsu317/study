@@ -377,7 +377,9 @@ class MainActivity : ComponentActivity() {
 }
 ```
 
-![result](result.gif)
+<div align="center">
+<img src="result.gif" width="30%"/>
+</div>
 
 ## Testing
 
