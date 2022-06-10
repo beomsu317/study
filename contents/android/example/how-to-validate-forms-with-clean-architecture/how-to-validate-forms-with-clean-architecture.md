@@ -156,7 +156,7 @@ class MainViewModel(
 }
 ```
 
-유저가 이벤트를 발생시켰을 때의 이벤트를 `RegistrationFormEvent` sealed class로 작성한다.0
+유저가 이벤트를 발생시켰을 때의 이벤트를 `RegistrationFormEvent` sealed class로 작성한다.
 
 ```kotlin
 sealed class RegistrationFormEvent {
@@ -378,7 +378,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="result.gif" width="30%"/>
+<img src="result.gif" width="50%"/>
 </div>
 
 ## Testing
