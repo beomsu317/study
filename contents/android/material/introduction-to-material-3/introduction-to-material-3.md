@@ -11,14 +11,14 @@ Material 3에 대해 알아보자. Material 3는 구글의 새로운 표준이�
 dynamic colors라는 새로운 기능이 추가되었다. 안드로이드 12기기가 있다면 이에 대해 알 수도 있다. dynamic colors는 기기의 wallpaper에 따라 앱의 색상이 변경된다. 다음 wallpaper와 clock 앱을 확인해보면, 색상이 유사한 것을 알 수 있다.  
 
 <div align="center">
-<img src="wallpaper.png" width="40%">
-<img src="clock.png" width="40%">
+<img src="res/wallpaper.png" width="40%">
+<img src="res/clock.png" width="40%">
 </div>
 
 즉, 안드로이드에서 wallpaper 또는 지정한 색상으로 color theme을 생성하여 앱에 적용한다. 설정에서 Basic colors를 적용해 원하는 색상을 지정할 수도 있다.
 
 <div align="center">
-<img src="setting.png" width="40%">
+<img src="res/setting.png" width="40%">
 </div>
 
 ### [Material 3 Color theming](https://m3.material.io/libraries/mdc-android/color-theming)
@@ -37,7 +37,7 @@ dynamic colors라는 새로운 기능이 추가되었다. 안드로이드 12기�
 * `=`가 해당 UI에서 주요한 역할을 하므로 Primary Key Color가 사용되며, `AC` 버튼은 값을 삭제하는 역할이기 때문에 눈에 띄어야 하지만 Primary Key Color보다는 덜 띄어야 한다. 이럴 때 Tertiary Key Color를 사용한다.  
 
 <div align="center">
-<img src="calculator.png" width="40%">
+<img src="res/calculator.png" width="40%">
 </div>
 
 #### [Color Roles](https://m3.material.io/styles/color/the-color-system/color-roles)
