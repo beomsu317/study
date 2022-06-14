@@ -72,7 +72,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="result.gif" width="40%">
+<img src="img/result.gif" width="40%">
 </div>
 
 ## References

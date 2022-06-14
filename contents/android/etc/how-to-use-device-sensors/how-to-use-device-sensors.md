@@ -178,7 +178,7 @@ class MainActivity : ComponentActivity() {
 센서를 통해 외부 밝기에 따라 백그라운드가 변경되는 것을 확인할 수 있다.
 
 <div align="center">
-<img src="result.gif" width="50%"/>
+<img src="img/result.gif" width="50%"/>
 </div>
 
 ## References
