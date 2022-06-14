@@ -1,10 +1,10 @@
-# How to Build a Simple REST API With Ktor + Android App
+# How to Build a Simple REST API - Make an android app
 
-토끼 사진을 제공해주는 API를 만들고, 안드로이드 앱에 출력해보자.
+토끼 사진을 제공해주는 API를 만들고, 안드로이드 앱에 출력해보자. REST API를 제공해주는 Ktor 서버는 [How to Build a Simple REST API - Setup Ktor Server](https://github.com/beomsu317/study/blob/main/contents/ktor/example/how-to-build-a-simple-rest-api/how-to-build-a-simple-rest-api.md)를 참고한다.
 
 ## Make an android app
 
-서버와 동일하게 `data/` 패키지를 생성한 후 `Rabbit` data class를 생성해준다.
+서버와 동일하게 `data` 패키지를 생성한 후 `Rabbit` data class를 생성해준다.
 
 ```kotlin
 data class Rabbit(
@@ -14,7 +14,7 @@ data class Rabbit(
 )
 ```
 
-`data/` 패키지 하위에 `RabbitsApi` 인터페이스 생성 후 다음과 같이 작성해준다.
+`data` 패키지 하위에 `RabbitsApi` 인터페이스 생성 후 다음과 같이 작성해준다.
 
 ```kotlin
 interface RabbitsApi {
@@ -28,7 +28,7 @@ interface RabbitsApi {
 }
 ```
 
-`di/` 패키지 생성 후 `RabbitsApi` Retrofit 인스턴스를 제공해주는 함수를 작성한다.
+`di` 패키지 생성 후 `RabbitsApi` Retrofit 인스턴스를 제공해주는 함수를 작성한다.
 
 ```kotlin
 @Module
@@ -124,7 +124,7 @@ class RabbitApp: Application()
 </manifest>
 ```
 
-`MainActivity`에서 Compose UI를 다음과 같이 작성한다.
+`MainActivity`에 Jetpack Compose UI를 다음과 같이 작성한다.
 
 ```kotlin
 @AndroidEntryPoint
@@ -183,7 +183,9 @@ class MainActivity : ComponentActivity() {
 
 다음과 같이 처음 실행 시 토끼 사진를 로드하며 버튼을 클릭하면 임의의 토끼 사진을 로드한다.
 
-[화면 기록 2022-01-26 오후 10.40.00.mov](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e2627bfe-eae1-405c-9460-ce1e64c982fb/화면_기록_2022-01-26_오후_10.40.00.mov)
+<div align="center">
+<img src="img/result.gif" width="40%">
+</div>
 
 ## References
 

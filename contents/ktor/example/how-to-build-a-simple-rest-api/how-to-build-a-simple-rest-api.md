@@ -1,4 +1,4 @@
-# How to Build a Simple REST API With Ktor + Android App
+# How to Build a Simple REST API - Setup Ktor Server
 
 토끼 사진을 제공해주는 API를 만들고, 안드로이드 앱에 출력해보자.
 
@@ -180,7 +180,7 @@ static {
 }
 ```
 
-이제 ktor 서버 구현은 완료되었다. 안드로이드 구현은 []()를 확인하자.
+이제 ktor 서버 구현은 완료되었다. 안드로이드 구현은 [How to Build a Simple REST API - Make an android app](https://github.com/beomsu317/study/blob/main/contents/android/example/how-to-build-a-simple-rest-api/how-to-build-a-simple-rest-api.md)를 확인하자.
 
 ## References
 
