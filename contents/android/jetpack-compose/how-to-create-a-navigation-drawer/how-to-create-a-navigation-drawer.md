@@ -1,4 +1,4 @@
-# how-to-create-a-navigation-drawer-in-jetpack-compose
+# How to Create a Navigation Drawer
 
 Jetpack Compose를 통해 navigtaion drawer를 구현해본다.
 
