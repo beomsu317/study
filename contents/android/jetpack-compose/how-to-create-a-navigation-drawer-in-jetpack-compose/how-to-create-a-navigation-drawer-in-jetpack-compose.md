@@ -155,7 +155,7 @@ class MainActivity : ComponentActivity() {
 Jetpack Compose의 Drawer의 경우 왼쪽 edge에서 드래그하지 않고 중간에서 드래그해도 drawer가 나타나게 된다. 이를 원치 않는 경우 `Scaffold`에 `drawerGesturesEnabled = scaffoldState.drawerState.isOpen` 파라미터를 전달해 drawer가 열려있을 때만 동작하게 하도록 할 수 있다.
 
 <div align="center">
-<img src="drawer.gif" width="40%">
+<img src="result.gif" width="40%">
 </div>
  
 
