@@ -1,4 +1,4 @@
-# How to Make a QR Code Scanner in Jetpack Compose
+# How to Make a QR Code Scanner
 
 QR Code Scanner를 만들어보자. [여기서](https://github.com/philipplackner/QrCodeScannerCompose) initial 프로젝트를 클론한다.
 
