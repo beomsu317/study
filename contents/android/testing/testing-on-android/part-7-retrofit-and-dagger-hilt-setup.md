@@ -134,4 +134,4 @@ object AppModule {
 
 ## References
 
-[Setting up Project & Room DB - Testing on Android - Part 5](https://www.youtube.com/watch?v=2p6cfaIK3_g&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=5)
+* [Setting up Project & Room DB - Testing on Android - Part 5](https://www.youtube.com/watch?v=2p6cfaIK3_g&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=5)

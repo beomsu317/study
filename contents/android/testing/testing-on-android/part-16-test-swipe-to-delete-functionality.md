@@ -191,4 +191,4 @@ class ShoppingFragmentTest {
 
 ## References
 
-[Test Swipe to Delete Functionality - Testing on Android - Part 16](https://www.youtube.com/watch?v=V5S2-Mg8B2U&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=16)
+* [Test Swipe to Delete Functionality - Testing on Android - Part 16](https://www.youtube.com/watch?v=V5S2-Mg8B2U&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=16)

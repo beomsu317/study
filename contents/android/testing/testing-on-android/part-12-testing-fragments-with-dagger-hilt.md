@@ -94,4 +94,4 @@ class ShoppingDaoTest {
 
 ## References
 
-[Testing Fragments with Dagger-Hilt - Testing on Android - Part 12](https://www.youtube.com/watch?v=k4zG93ogWFY&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=12)
+* [Testing Fragments with Dagger-Hilt - Testing on Android - Part 12](https://www.youtube.com/watch?v=k4zG93ogWFY&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=12)

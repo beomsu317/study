@@ -187,4 +187,4 @@ adb shell settings put global animator_duration_scale 0
 
 ## References
 
-[Test Image Picking - Testing on Android - Part 14](https://www.youtube.com/watch?v=IcceHTRi7vg&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=14)
+* [Test Image Picking - Testing on Android - Part 14](https://www.youtube.com/watch?v=IcceHTRi7vg&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=14)

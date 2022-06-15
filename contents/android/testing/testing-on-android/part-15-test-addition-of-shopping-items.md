@@ -134,4 +134,4 @@ class AddShoppingItemFragmentTest {
 
 ## References
 
-[Test Addition of Shopping Items - Testing on Android - Part 15](https://www.youtube.com/watch?v=6ZQ9v0KFiPA&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=15)
+* [Test Addition of Shopping Items - Testing on Android - Part 15](https://www.youtube.com/watch?v=6ZQ9v0KFiPA&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=15)

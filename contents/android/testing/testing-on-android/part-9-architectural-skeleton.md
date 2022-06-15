@@ -126,4 +126,4 @@ class ShoppingFragment: Fragment(R.layout.fragment_shopping) {
 
 ## References
 
-[Architectural Skeleton - Testing on Android - Part 9](https://www.youtube.com/watch?v=x2WahC3N_Yw&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=9)
+* [Architectural Skeleton - Testing on Android - Part 9](https://www.youtube.com/watch?v=x2WahC3N_Yw&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=9)

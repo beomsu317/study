@@ -136,4 +136,4 @@ class FakeShoppingRepository: ShoppingRepository {
 
 ## References
 
-[Creating a Fake Repository for Testing - Testing on Android - Part 8](https://www.youtube.com/watch?v=JsktEQvoHEs&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=8)
+* [Creating a Fake Repository for Testing - Testing on Android - Part 8](https://www.youtube.com/watch?v=JsktEQvoHEs&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=8)

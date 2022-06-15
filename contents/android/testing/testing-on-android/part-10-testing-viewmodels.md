@@ -200,4 +200,4 @@ class ShoppingViewModelTest {
 
 ## References
 
-[Testing ViewModels - Testing in Android - Part 10](https://www.youtube.com/watch?v=B-dJTFeOAqw&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=10)
+* [Testing ViewModels - Testing in Android - Part 10](https://www.youtube.com/watch?v=B-dJTFeOAqw&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=10)

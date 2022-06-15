@@ -76,10 +76,10 @@ class ShoppingDaoTest {
         hiltRule.inject()
         dao = database.shoppingDao()
     }
-		...
+    // ...
 }
 ```
 
 ## References
 
-[Testing with Dagger-Hilt - Testing on Android - Part 11](https://www.youtube.com/watch?v=nOp_CEP_EjM&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=11)
+* [Testing with Dagger-Hilt - Testing on Android - Part 11](https://www.youtube.com/watch?v=nOp_CEP_EjM&list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq&index=11)
