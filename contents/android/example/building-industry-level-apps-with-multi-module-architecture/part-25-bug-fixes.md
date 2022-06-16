@@ -262,8 +262,10 @@ fun TrackerOverviewScreen(
 }
 ```
 
-<div align="center">
-    <video controls>
-      <source src="img/part-25/result.mov" type="video/mp4">
-    </video>
+<div align="center" class="row">
+<img src="img/part-25/result1.gif" width="40%">
+<img src="img/part-25/result2.gif" width="40%">
 </div>
+
+
+
