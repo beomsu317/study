@@ -1,4 +1,4 @@
-# **How to Use String Resources In a ViewModel - Android Studio Tutorial**
+# How to Use String Resources In a ViewModel
 
 ViewModel에서 String Resource를 어떻게 사용하는지 알아보자.
 
