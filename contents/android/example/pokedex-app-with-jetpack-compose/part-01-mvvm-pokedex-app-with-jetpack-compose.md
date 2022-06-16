@@ -3,8 +3,8 @@
 다음과 같은 포켓몬 도감을 Jetpack Compose를 통해 만들어 볼 것이다. 포켓몬을 클릭하면 상세 내용이 나온다.
 
 <div align="center" class="row">
-<div><img src="img/part-1/sample1.png" width="40%"></div>
-<div><img src="img/part-1/sample2.png" width="40%"></div>
+<img src="img/part-1/sample1.png" width="40%">
+<img src="img/part-1/sample2.png" width="40%">
 </div>
 
 기본적인 세팅이 되어있는 [이 레포](https://github.com/philipplackner/JetpackComposePokedex)에서 프로젝트를 클론하자. 포켓몬에 대한 정보는 [여기](https://pokeapi.co/)에서 무료로 가져올 수 있다.
