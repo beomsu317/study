@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
 
 
 <div align="center">
-<img src="img/part-3/width_600.png" width="40%">
+<img src="img/part-03/width_600.png" width="40%">
 </div>
 
 다음과 같이 `.requiredWidth(600.dp)`로 설정한 경우 정확히 설정된 `600.dp` 만큼 설정하게 된다. 중앙에서부터 차지하기 때문에 텍스트들이 왼쪽 바깥으로 나가게 된다.
@@ -54,7 +54,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-3/required_width.png" width="40%">
+<img src="img/part-03/required_width.png" width="40%">
 </div>
 
 ## Padding
@@ -82,7 +82,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-3/padding.png" width="40%">
+<img src="img/part-03/padding.png" width="40%">
 </div>
 
 물론 상하좌우로도 padding을 각각 추가할 수 있다. top으로부터 50dp 떨어지도록 만들어보자.
@@ -108,7 +108,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-3/vertical_padding.png" width="40%">
+<img src="img/part-03/vertical_padding.png" width="40%">
 </div>
 
 ## Offset
@@ -139,7 +139,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-3/offset.png" width="40%">
+<img src="img/part-03/offset.png" width="40%">
 </div>
 
 ## Spacer
@@ -170,7 +170,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-3/spacer.png" width="40%">
+<img src="img/part-03/spacer.png" width="40%">
 </div>
 
 ## Border
@@ -199,7 +199,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-3/border.png" width="40%">
+<img src="img/part-03/border.png" width="40%">
 </div>
 
 modifier는 순차적으로 적용된다. 따라서 동일한 modifier를 여러번 적용할 경우 다른 결과를 초래한다. 즉, 다음과 같이 설정하면 컨테이너에 3개의 border가 적용되고 그 안에 텍스트가 있는 것을 확인할 수 있다.
@@ -231,7 +231,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-3/borders.png" width="40%">
+<img src="img/part-03/borders.png" width="40%">
 </div>
 
 다음과 같이 `Text`에도 border, padding을 적용해 창의적인 결과를 만들어낼 수 있다.
@@ -268,7 +268,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-3/text_border_padding.png" width="40%">
+<img src="img/part-03/text_border_padding.png" width="40%">
 </div>
 
 ## Click

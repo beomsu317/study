@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-7/snackbar.png" width="40%">
+<img src="img/part-07/snackbar.png" width="40%">
 </div>
 
 우리가 원하는 스낵바를 사용하려면 다음과 같이 `Scaffold` 안에 정의해 사용할 수 있다. 이름을 입력하고 버튼을 클릭하면 greeting 메시지가 출력된다.
@@ -89,7 +89,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-7/textfield.png" width="40%">
+<img src="img/part-07/textfield.png" width="40%">
 </div>
 
 ## References

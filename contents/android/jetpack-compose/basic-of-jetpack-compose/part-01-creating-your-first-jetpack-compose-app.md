@@ -49,7 +49,7 @@ class MainActivity : ComponentActivity() {
 `@Preview` 어노테이션이 있는 composable은 미리보기가 가능한 함수이다.
 
 <div align="center">
-<img src="img/part-1/preview_annotation.png">
+<img src="img/part-01/preview_annotation.png">
 </div>
 
 ## References

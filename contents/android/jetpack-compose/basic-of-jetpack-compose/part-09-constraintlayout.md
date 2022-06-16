@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-9/link_to.png" width="40%">
+<img src="img/part-09/link_to.png" width="40%">
 </div>
 
 `end.linkTo(parent.end)`를 추가하면 `greenBox`와 `parent.end` 사이에 위치하게 된다.
@@ -64,7 +64,7 @@ constrain(redBox) {
 ```
 
 <div align="center">
-<img src="img/part-9/link_to_end.png" width="40%">
+<img src="img/part-09/link_to_end.png" width="40%">
 </div>
 
 다음과 같이 `width`를 `Dimension.fillToConstraints`로 설정하면 나머지 공간을 가득 채우게 된다.
@@ -80,7 +80,7 @@ constrain(redBox) {
 ```
 
 <div align="center">
-<img src="img/part-9/fill_to_constraints.png" width="40%">
+<img src="img/part-09/fill_to_constraints.png" width="40%">
 </div>
 
 `ConstraintSet` 마지막에 다음 코드를 추가하면 수평으로 체이닝된다.
@@ -90,7 +90,7 @@ createHorizontalChain(greenBox, redBox)
 ```
 
 <div align="center">
-<img src="img/part-9/create_horizontal_chain.png" width="40%">
+<img src="img/part-09/create_horizontal_chain.png" width="40%">
 </div>
 
 `chainStyle` 파라미터에 `ChainStyle.Packed`를 전달하면 중앙에 위치하게 된다.
@@ -100,7 +100,7 @@ createHorizontalChain(greenBox, redBox, chainStyle = ChainStyle.Packed)
 ```
 
 <div align="center">
-<img src="img/part-9/chainstyle_packed.png" width="40%">
+<img src="img/part-09/chainstyle_packed.png" width="40%">
 </div>
 
 가이드라인을 추가하여 원하는 위치에 아이템을 위치시킬 수 있다. 다음의 경우 `greenBox`를 top으로부터 50% 밑에 위치시킨다.
@@ -149,7 +149,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-9/create_guideline_from_top.png" width="40%">
+<img src="img/part-09/create_guideline_from_top.png" width="40%">
 </div>
 
 ## References

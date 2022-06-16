@@ -1,6 +1,6 @@
 # SearchBar & PokémonListScreen
 
-이번에는 포켓몬들의 리스트 스크린을 만들어볼 것이다. `pokemonlist/` 패키지를 생성하고 `PokemonListScreen`을 생성한다.
+이번에는 포켓몬들의 리스트 스크린을 만들어볼 것이다. `pokemonlist` 패키지를 생성하고 `PokemonListScreen`을 생성한다.
 
 ```kotlin
 @Composable
@@ -88,8 +88,8 @@ composable("pokemon_list_screen") {
 에뮬레이터에서 실행시켜보면 다음과 같이 보여지며 Focus가 된 경우 hint가 사라진다.
 
 <div align="center" class="column">
-<img src="img/part-3/search.png" width="40%">
-<img src="img/part-3/focus.png" width="40%">
+<div><img src="img/part-03/search.png" width="50%"></div>
+<div><img src="img/part-03/focus.png" width="50%"></div>
 </div>
 
 ## References

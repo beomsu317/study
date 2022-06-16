@@ -3,8 +3,8 @@
 이번엔 이미지에 텍스트가 있는 composable을 만들어보자. 우선 drawable에 kermit.jpg 파일을 넣는다.
 
 <div align="center" class="column">
-<div><img src="img/part-4/drawable.png" width="40%"></div>
-<div><img src="img/part-4/kermit.png" width="40%"></div>
+<div><img src="img/part-04/drawable.png" width="40%"></div>
+<div><img src="img/part-04/kermit.png" width="40%"></div>
 </div>
 
 Composable 함수의 Naming Convention은 대문자로 시작하여 카멜 기법으로 표기한다.
@@ -61,7 +61,7 @@ fun ImageCard(
 ```
 
 <div align="center">
-<img src="img/part-4/kermit_image_view.png" width="40%">
+<img src="img/part-04/kermit_image_view.png" width="40%">
 </div>
 
 텍스트가 잘 안보이기 때문에 gradient를 추가한다.
@@ -134,7 +134,7 @@ fun ImageCard(
 ```
 
 <div align="center">
-<img src="img/part-4/kermit_card.png" width="40%">
+<img src="img/part-04/kermit_card.png" width="40%">
 </div>
 
 ## References

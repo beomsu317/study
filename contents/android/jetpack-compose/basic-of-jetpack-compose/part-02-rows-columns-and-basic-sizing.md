@@ -41,13 +41,13 @@ class MainActivity : ComponentActivity() {
 `Column` 기반으로 텍스트를 나열하기 때문에 다음과 같이 원하는 결과를 얻을 수 있다.
 
 <div align="center">
-<img src="img/part-2/column.png">
+<img src="img/part-02/column.png">
 </div>
 
 `Column`을 `Row`로 변경하면 다음과 같이 가로로 나열하게 된다.
 
 <div align="center">
-<img src="img/part-2/row.png">
+<img src="img/part-02/row.png">
 </div>
 
 기존에는 ConstraintLayout을 사용해 중첩하여 복잡하게 구현했었지만 Jetpack Compose를 이용하면 중첩되는 레이아웃들을 효율적으로 관리할 수 있게 된다. 그렇기 때문에 `Row`나 `Column` 기반 레이아웃을 사용해도 괜찮다.
@@ -74,7 +74,7 @@ class MainActivity : ComponentActivity() {
 결과는 다음과 같으며 `Alignment.CenterHorizontally`를 설정하면 텍스트가 초록색 바탕의 중앙에 위치하게 된다.
 
 <div align="center">
-<img src="img/part-2/green_background.png">
+<img src="img/part-02/green_background.png">
 </div>
 
 modifier에 `.fillMaxSize()`를 추가하게 되면 모든 페이지를 채우게 된다.
@@ -101,7 +101,7 @@ class MainActivity : ComponentActivity() {
 그럼 다음과 같이 텍스트가 중앙에 위치한 것을 알 수 있다.
 
 <div align="center">
-<img src="img/part-2/fillmaxsize.png">
+<img src="img/part-02/fillmaxsize.png">
 </div>
 
 `verticalArrangement` 파라미터에 `Arrangement.Bottom`을 인자로 주면 텍스트가 바닥에 위치하게 된다.
@@ -152,7 +152,7 @@ class MainActivity : ComponentActivity() {
 그럼 다음과 같이 텍스트 중간에 Space가 차지하게 된다.
 
 <div align="center">
-<img src="img/part-2/space_between.png" width="40%">
+<img src="img/part-02/space_between.png" width="40%">
 </div>
 
 `Arrangement.SpaceEvenly`를 전달해보자.
@@ -181,7 +181,7 @@ class MainActivity : ComponentActivity() {
 각 텍스트마다 동일한 높이를 가지도록 정렬된다.
 
 <div align="center">
-<img src="img/part-2/space_evenly.png" width="40%">
+<img src="img/part-02/space_evenly.png" width="40%">
 </div>
 
 `Arrangement.SpaceAround`를 인자로 전달해보자.
@@ -210,7 +210,7 @@ class MainActivity : ComponentActivity() {
 `Arrangement.SpaceEvenly`와 비슷하지만 조금 다르다. 텍스트 사이는 동일한 Space를 가지지만 처음 또는 마지막 텍스트는 텍스트 간 Space의 절반의 높이를 가진다.
 
 <div align="center">
-<img src="img/part-2/space_around.png" width="40%">
+<img src="img/part-02/space_around.png" width="40%">
 </div>
 
 `Row`로 변경하는 경우 `horizontalArrangement`과 `verticalAlignment`를 바꿔주어야 한다.
@@ -239,7 +239,7 @@ class MainActivity : ComponentActivity() {
 그럼 다음과 같이 수평으로 정렬된 결과를 얻을 수 있다.
 
 <div align="center">
-<img src="img/part-2/row_alignment.png" width="40%">
+<img src="img/part-02/row_alignment.png" width="40%">
 </div>
 
 다음과 같이 `.fillMaxSize(0.5f)`에 0.5f 인자를 전달하면 전체 화면의 50% 까지만 차지하게 된다. 기존 xml에서는 가이드라인과 같이 ConstraintLayout이 필요하고, 가이드라인의 퍼센트를 설정해야 하지만 compose는 다음과 같이 간단하게 표현할 수 있다.
@@ -266,7 +266,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-2/fillmaxsize_ratio.png" width="40%">
+<img src="img/part-02/fillmaxsize_ratio.png" width="40%">
 </div>
 
 위에처럼 비율을 사용하고 싶지 않은 경우 다음과 같이 `.width(300.dp)` 표현할 수 있다.
@@ -294,7 +294,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-2/width.png" width="40%">
+<img src="img/part-02/width.png" width="40%">
 </div>
 
 ## References

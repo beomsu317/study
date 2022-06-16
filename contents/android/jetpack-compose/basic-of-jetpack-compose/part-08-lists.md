@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-8/column.png" width="40%">
+<img src="img/part-08/column.png" width="40%">
 </div>
 
 다음과 같이 `Column`에 `verticalScroll`을 추가하면 스크롤되지만 모든 리스트가 한 번에 로딩되어 느려지게 된다.
@@ -114,7 +114,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 <div align="center">
-<img src="img/part-8/lazycolumn.png" width="40%">
+<img src="img/part-08/lazycolumn.png" width="40%">
 </div>
 
 ## References

@@ -133,7 +133,7 @@ fun ColorBox(
 ```
 
 <div align="center">
-<img src="img/part-6/update_color.png" width="40%">
+<img src="img/part-06/update_color.png" width="40%">
 </div>
 
 이렇게 구현하는 것은 앱이 커질수록 복잡해질 수 있고, 이는 ViewModel에서 state를 간단하게 처리할 수 있다. 이것은 추후에 다룰 것이다.
