@@ -1,4 +1,4 @@
-# **Build Complex Animations With MotionLayout in Jetpack Compose - Android Studio Tutorial**
+# Build Complex Animations With MotionLayout
 
 Jetpack Compose에서 모션 레이아웃이 어떻게 동작하는지 알아보자. 우선 다음 디펜던시를 추가하자. 이 디펜던시는 모션 레이아웃을 포함한다. 모션 레이아웃은 결국 Constraint 레이아웃이다.
 

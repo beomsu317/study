@@ -1,4 +1,4 @@
-# How to Do PROPER Permission Handling in Jetpack Compose
+# How to Do PROPER Permission Handling
 
 Jetpack Compose에서 여러개의 권한을 적절하게 처리하는 방법을 알아보자.
 

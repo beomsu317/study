@@ -1,4 +1,4 @@
-# **How to Support All Screen Sizes in Jetpack Compose**
+# How to Support All Screen Sizes
 
 모든 스크린 사이즈에 맞게 이쁘게 표시되는 방법을 알아보자.
 
