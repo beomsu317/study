@@ -1,24 +1,24 @@
 # Building the Server
 
-
+안드로이드 앱은 [Building the Android App](https://github.com/beomsu317/study/blob/main/contents/android/example/android-chat-app-with-ktor/building-the-android-app.md)를 참고한다.
 
 ## Setup Ktor
 
 [여기로](https://start.ktor.io/#/settings?name=ktor-chat&website=example.com&artifact=com.example.ktor-chat&kotlinVersion=1.6.10&ktorVersion=2.0.0-beta-1&buildSystem=GRADLE_KTS&engine=NETTY&configurationIn=CODE&addSampleCode=true&plugins=) 이동해서 다음과 같이 설정한 후 ktor-chat 프로젝트를 생성하자.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a2c164b2-a452-4f20-846d-b33441fc19a9/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aa76178a-67cb-4f53-a2d0-fe27e94d11aa/Untitled.png)
+<div align="center" class="column">
+<img src="img/project_name.png" width="80%">
+<img src="img/project_settings.png" width="80%">
+</div>
 
 다음과 같은 플러그인들을 추가한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/17d79b29-3412-49d6-99ac-2b186d064f0c/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a285539-3002-4d73-93b5-5e901efde4f4/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e25d6db5-10fb-4355-b663-c2483019bac8/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d63ae718-e0c1-4173-8d15-ee77d609d8a5/Untitled.png)
+<div align="center" class="column">
+<img src="img/plugin1.png" width="80%">
+<img src="img/plugin2.png" width="80%">
+<img src="img/plugin3.png" width="80%">
+<img src="img/plugin4.png" width="80%">
+</div>
 
 Intellij를 통해 ktor-chat을 열어보자. `Application.kt` 파일에 entry point가 있다.
 
@@ -59,11 +59,10 @@ fun Application.configureSerialization() {
 ```kotlin
 val kmongo_version: String by project
 val koin_version: String by project
-
-...
+// ...
 
 dependencies {
-		...
+    // ...
 
     // KMongo
     implementation("org.litote.kmongo:kmongo:$kmongo_version")
@@ -79,7 +78,7 @@ dependencies {
 `gradle.properties` 파일에 다음과 같이 kmongo, koin 버전을 작성해주면 에러가 없어지게 된다.
 
 ```kotlin
-...
+// ...
 koin_version=3.1.2
 kmongo_version=4.3.0
 ```
@@ -98,7 +97,7 @@ brew install mongodb-community-shell
 
 ## Implementation
 
-`data/model/` 패키지를 만들고 `Message` 데이터 클래스를 생성한다.
+`data/model` 패키지를 만들고 `Message` 데이터 클래스를 생성한다.
 
 ```kotlin
 // json으로 serializable하기 위함
@@ -112,7 +111,7 @@ data class Message(
 )
 ```
 
-`data/` 패키지 하위에 `MessageDataSource`를 생성해준다.
+`data` 패키지 하위에 `MessageDataSource`를 생성해준다.
 
 ```kotlin
 interface MessageDataSource {
@@ -145,7 +144,7 @@ class MessageDataSourceImpl(
 }
 ```
 
-chat session을 처리하는 room을 만들어주어야 하며 해당 room에 조인한 모든 멤버에 대한 참조를 유지하고 있어야 한다. `room/` 패키지를 만들고 하위에 `Member` 데이터 클래스를 생성한다.
+chat session을 처리하는 room을 만들어주어야 하며 해당 room에 조인한 모든 멤버에 대한 참조를 유지하고 있어야 한다. `room` 패키지를 만들고 하위에 `Member` 데이터 클래스를 생성한다.
 
 ```kotlin
 data class Member(
@@ -164,7 +163,7 @@ class MemberAlreadyExistsException: Exception(
 )
 ```
 
-`room/` 디렉토리에 `RoomController`를 생성한다.
+`room` 디렉토리에 `RoomController`를 생성한다.
 
 ```kotlin
 class RoomController(
@@ -216,7 +215,7 @@ class RoomController(
 }
 ```
 
-`plugins/` 패키지의 `Security.kt` 파일의 `routing` 블럭을 제거하고 다음과 같이 만들어준다.
+`plugins` 패키지의 `Security.kt` 파일의 `routing` 블럭을 제거하고 다음과 같이 만들어준다.
 
 ```kotlin
 fun Application.configureSecurity() {
@@ -229,7 +228,7 @@ fun Application.configureSecurity() {
 }
 ```
 
-`session/` 패키지를 생성한 후 하위에 `ChatSession` 데이터 클래스를 만들어준다.
+`session` 패키지를 생성한 후 하위에 `ChatSession` 데이터 클래스를 만들어준다.
 
 ```kotlin
 data class ChatSession(
@@ -257,7 +256,7 @@ fun Application.configureSecurity() {
 }
 ```
 
-`routes/`에 2개의 route를 작성해준다.
+`routes`에 2개의 route를 작성해준다.
 
 ```kotlin
 fun Route.chatSocket(roomController: RoomController) {
@@ -305,7 +304,7 @@ fun Route.getAllMessages(roomController: RoomController) {
 }
 ```
 
-Koin 설정을 하기 위해 `di/` 패키지를 만들고 `MainModule.kt` 파일을 생성한다.
+Koin 설정을 하기 위해 `di` 패키지를 만들고 `MainModule.kt` 파일을 생성한다.
 
 ```kotlin
 val mainModule = module {
@@ -339,7 +338,7 @@ fun Application.module() {
 }
 ```
 
-`plugin/` 디렉토리의 `Routing.kt`에 다음과 같이 Routing을 추가한다.
+`plugin` 디렉토리의 `Routing.kt`에 다음과 같이 Routing을 추가한다.
 
 ```kotlin
 fun Application.configureRouting() {
@@ -382,15 +381,22 @@ fun Application.configureSockets() {
 
 이제 서버 측 구현은 완료가 되었으며 [여기서](https://www.piesocket.com/websocket-tester) 웹 소켓 테스트를 수행할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3f2689e4-d540-4dfb-9149-e25ce5483dec/Untitled.png)
+<div align="center">
+<img src="img/socket_test1.png" width="80%">
+</div>
 
 `username`을 파라미터로 전달한 후 메시지를 보내면 보낸 메시지를 전달받을 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/52abd3bb-e35a-437d-8f43-9c8bc6ca5680/Untitled.png)
+<div align="center">
+<img src="img/socket_test2.png" width="80%">
+</div>
 
 몽고 디비를 확인해보면 다음과 같이 보낸 메시지를 확인할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/980301e9-28ef-472a-8221-d4d52908cf5e/Untitled.png)
+<div align="center">
+<img src="img/mongodb.png" width="80%">
+</div>
+
 
 ## References
 
