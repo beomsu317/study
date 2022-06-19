@@ -13,32 +13,33 @@ Session는 다른 HTTP 요청 간 데이터를 유지하는 메커니즘을 제�
 implementation("io.ktor:ktor-server-sessions:$ktor_version")
 ```
 
-# Install Sessions
+## Install Sessions
 
-세션을 설치하기 전 세션 데이터를 저장하기 위한 data class를 생성한다.
-
-```kotlin
-data class UserSession(val id: String, val count: Int)
-```
-
-선택적으로 [authentication](https://ktor.io/docs/session-auth.html)에 사용하기
-위해 [Principal](https://api.ktor.io/ktor-features/ktor-auth/ktor-auth/io.ktor.auth/-principal/index.html)을 상속한다.
-
-필요한 data class 생성 후, `install` 함수에 `Sessions` 플러그인을 전달하여 설치한다. `install` 블록에서 서버와 클라이언트 간 데이터를 전달하는 방법에 따라 `cookie`
-또는 `header` 함수를 호출한다.
+`Sessions` 플러그인을 설치하기 위해, 이를 `install` 함수에 전달한다. 서버를 생성하는 방법에 따라 두 가지로 나뉜다.
 
 ```kotlin
-import io.ktor.sessions.*
+import io.ktor.server.application.*
+import io.ktor.server.sessions.*
 
 // ...
-fun Application.module() {
-    install(Sessions) {
-        cookie<UserSession>("user_session")
-    }
+fun main() {
+    embeddedServer(Netty, port = 8080) {
+        install(Sessions)
+        // ...
+    }.start(wait = true)
 }
 ```
 
-이제 세션 내용을 설정하거나 세션을 수정하거나 지울 수 있다.
+```kotlin
+import io.ktor.server.application.*
+import io.ktor.server.sessions.*
+
+// ...
+fun Application.module() {
+    install(Sessions)
+    // ...
+}
+```
 
 ## Session configuration overview
 
@@ -75,8 +76,6 @@ data class UserSession(val id: String, val count: Int)
 
 ### Cookie
 
-## Cookie
-
 세션 데이터를 쿠키를 사용해 전달하려면, `install(Sessions)` 블록 내에서 지정된 이름과 data class로  `cookie` 메서드를 호출한다.
 
 ```kotlin
@@ -107,7 +106,7 @@ install(Sessions) {
 }
 ```
 
-## **Header**
+### **Header**
 
 커스텀 헤더를 통해 세션 데이터를 전달하려면, `install(Sessions)` 블럭 안에서 지정된 이름과 data class와 함께 `header` 함수를 호출해야 한다.
 
@@ -132,7 +131,8 @@ install(Sessions) {
 Ktor에서 세션 데이터를 2가지 방법으로 관리할 수 있다.
 
 - 서버와 클라이언트 간 세션 데이터를 전달한다. 이 경우 페이로드를 serialize 및 transform하여 클라이언트에 전송된 데이터를 서명하거나 암호화하는 방법을 지정할 수 있다.
-- 세션 데이터를 서버에 저장하고 세션 ID만 클라이언트에 전달한다. 페이로드를 서버의 어디에 저장할 지 선택해야 한다. 예를 들어, 세션을 메모리에 저장하거나, 특정 폴더 또는 Redis에 저장하는 등. 커스텀 저장소를 구현할 수도 있다.
+- 세션 데이터를 서버에 저장하고 세션 ID만 클라이언트에 전달한다. 페이로드를 서버의 어디에 저장할 지 선택해야 한다. 예를 들어, 세션을 메모리에 저장하거나, 특정 폴더 또는 Redis에 저장하는 등. 커스텀
+  저장소를 구현할 수도 있다.
 
 ## Store session payload on server
 
@@ -140,7 +140,8 @@ Ktor는 서버에 세션 데이터를 저장하고, 세션 ID만 서버와 클�
 
 ### In-memory storage
 
-[SessionStorageMemory](https://api.ktor.io/ktor-server/ktor-server-plugins/ktor-server-sessions/io.ktor.server.sessions/-session-storage-memory/index.html?_ga=2.155539579.1396641199.1655526702-658241611.1655526702&_gl=1*1al8e30*_ga*NjU4MjQxNjExLjE2NTU1MjY3MDI.*_ga_9J976DJZ68*MTY1NTUyOTI1OS4yLjEuMTY1NTUzMzc4OC4w)는 세션 내용을 메모리에 저장하도록 활성화한다. 이 저장소는 서버가 실행중인 경우에만 유지되며, 서버가 멈추면 세션 데이터는 버려진다. 다음과 같이 서버 메모리에 저장할 수 있다.
+[SessionStorageMemory](https://api.ktor.io/ktor-server/ktor-server-plugins/ktor-server-sessions/io.ktor.server.sessions/-session-storage-memory/index.html?_ga=2.155539579.1396641199.1655526702-658241611.1655526702&_gl=1*1al8e30*_ga*NjU4MjQxNjExLjE2NTU1MjY3MDI.*_ga_9J976DJZ68*MTY1NTUyOTI1OS4yLjEuMTY1NTUzMzc4OC4w)
+는 세션 내용을 메모리에 저장하도록 활성화한다. 이 저장소는 서버가 실행중인 경우에만 유지되며, 서버가 멈추면 세션 데이터는 버려진다. 다음과 같이 서버 메모리에 저장할 수 있다.
 
 ```kotlin
 cookie<CartSession>("cart_session", SessionStorageMemory()) {
@@ -151,7 +152,8 @@ cookie<CartSession>("cart_session", SessionStorageMemory()) {
 
 ### Directory storage
 
-[directorySessionStorage](https://api.ktor.io/ktor-server/ktor-server-plugins/ktor-server-sessions/io.ktor.server.sessions/directory-session-storage.html?_ga=2.122101707.1396641199.1655526702-658241611.1655526702&_gl=1*g4j2h9*_ga*NjU4MjQxNjExLjE2NTU1MjY3MDI.*_ga_9J976DJZ68*MTY1NTUyOTI1OS4yLjEuMTY1NTUzMzc4OC4w)는 세션 데이터를 특정 디렉토리 하위에 저장하기 위해 사용한다. 예를 들어, `build/.sessions` 디렉토리에 저장하려는 경우, `directorySessionStorage`를 다음과 같이 구현한다.
+[directorySessionStorage](https://api.ktor.io/ktor-server/ktor-server-plugins/ktor-server-sessions/io.ktor.server.sessions/directory-session-storage.html?_ga=2.122101707.1396641199.1655526702-658241611.1655526702&_gl=1*g4j2h9*_ga*NjU4MjQxNjExLjE2NTU1MjY3MDI.*_ga_9J976DJZ68*MTY1NTUyOTI1OS4yLjEuMTY1NTUzMzc4OC4w)
+는 세션 데이터를 특정 디렉토리 하위에 저장하기 위해 사용한다. 예를 들어, `build/.sessions` 디렉토리에 저장하려는 경우, `directorySessionStorage`를 다음과 같이 구현한다.
 
 ```kotlin
 header<CartSession>("cart_session", directorySessionStorage(File("build/.sessions"))) {
@@ -160,7 +162,9 @@ header<CartSession>("cart_session", directorySessionStorage(File("build/.session
 
 ### Custom storage
 
-Ktor는 커스텀 저장소를 구현하기 위한 [SessionStorage](https://api.ktor.io/ktor-server/ktor-server-plugins/ktor-server-sessions/io.ktor.server.sessions/-session-storage/index.html?_ga=2.104340288.1396641199.1655526702-658241611.1655526702&_gl=1*18kudrb*_ga*NjU4MjQxNjExLjE2NTU1MjY3MDI.*_ga_9J976DJZ68*MTY1NTUyOTI1OS4yLjEuMTY1NTUzMzc4OC4w) 인터페이스를 제공한다.
+Ktor는 커스텀 저장소를 구현하기
+위한 [SessionStorage](https://api.ktor.io/ktor-server/ktor-server-plugins/ktor-server-sessions/io.ktor.server.sessions/-session-storage/index.html?_ga=2.104340288.1396641199.1655526702-658241611.1655526702&_gl=1*18kudrb*_ga*NjU4MjQxNjExLjE2NTU1MjY3MDI.*_ga_9J976DJZ68*MTY1NTUyOTI1OS4yLjEuMTY1NTUzMzc4OC4w)
+인터페이스를 제공한다.
 
 ```kotlin
 interface SessionStorage {
@@ -170,13 +174,16 @@ interface SessionStorage {
 }
 ```
 
-이 세 가지 함수는 `suspending`이며, `ByteReadChannel`과 `ByteWriteChannel`을 사용하여 비동기 채널에서 데이터를 읽고 쓴다. [SessionStorageMemory](https://github.com/ktorio/ktor/blob/main/ktor-server/ktor-server-plugins/ktor-server-sessions/jvm/src/io/ktor/server/sessions/SessionStorageMemory.kt)를 참고하자.
+이 세 가지 함수는 `suspending`이며, `ByteReadChannel`과 `ByteWriteChannel`을 사용하여 비동기 채널에서 데이터를 읽고
+쓴다. [SessionStorageMemory](https://github.com/ktorio/ktor/blob/main/ktor-server/ktor-server-plugins/ktor-server-sessions/jvm/src/io/ktor/server/sessions/SessionStorageMemory.kt)
+를 참고하자.
 
 ## Protect session data
 
 ### Sign session data
 
-세션 데이터에 서명하면 세션 내용에 대한 변조를 방지할 수 있지만, 사용자가 이 내용을 볼 수 있다. 세션에 서명하기 위해 서명 키를 `SessionTransportTransformerMessageAuthentication` 생성자에 전달하고, 이 인스턴스를 `transform` 함수에 전달한다.
+세션 데이터에 서명하면 세션 내용에 대한 변조를 방지할 수 있지만, 사용자가 이 내용을 볼 수 있다. 세션에 서명하기 위해 서명
+키를 `SessionTransportTransformerMessageAuthentication` 생성자에 전달하고, 이 인스턴스를 `transform` 함수에 전달한다.
 
 ```kotlin
 install(Sessions) {
@@ -192,7 +199,8 @@ install(Sessions) {
 
 ### Sign and encrypt session data
 
-세션 데이터에 대해 서명과 암호화를 하면 세션 내용을 읽거나 변조할 수 없도록 막을 수 있다. 세션에 서명하고 암호화하기 위해 sing/encrypt 키를 `SessionTransportTransformerEncrypt` 생성자에 전달하고, 이 인스턴스를 `transform` 함수에 전달한다.
+세션 데이터에 대해 서명과 암호화를 하면 세션 내용을 읽거나 변조할 수 없도록 막을 수 있다. 세션에 서명하고 암호화하기 위해 sing/encrypt
+키를 `SessionTransportTransformerEncrypt` 생성자에 전달하고, 이 인스턴스를 `transform` 함수에 전달한다.
 
 ```kotlin
 install(Sessions) {
@@ -252,4 +260,4 @@ get("/logout") {
 
 ## References
 
-* [Sessions﻿](https://ktor.io/docs/sessions.html)
+* [Sessions](https://ktor.io/docs/sessions.html)
