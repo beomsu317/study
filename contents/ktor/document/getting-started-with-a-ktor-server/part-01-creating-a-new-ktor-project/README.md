@@ -46,19 +46,19 @@ fun main() {
 3. `main` 함수의 옆 아이콘을 클릭해 서버를 실행한다.
 
 <div align="center">
-<img src="img/part-01/start.png" width="80%">
+<img src="img/start.png" width="80%">
 </div>
 
 4. 실행 후 다음 로그를 확인할 수 있다.
 
 <div align="center">
-<img src="img/part-01/log.png">
+<img src="img/log.png">
 </div>
 
 이는 서버가 **http://0.0.0.0:8080**에 대해 요청을 받을 준비가 된 것이다. 기본 브라우저를 통해 확인한다.
 
 <div align="center">
-<img src="img/part-01/browser.png">
+<img src="img/browser.png">
 </div>
 
 ## **Test a Ktor application**
@@ -70,7 +70,7 @@ fun main() {
 2. `testRoot` 함수 옆의 아이콘을 눌러 테스트를 수행한다.
 
 <div align="center">
-<img src="img/part-01/test.png" width="80%">
+<img src="img/test.png" width="80%">
 </div>
 
 ## References

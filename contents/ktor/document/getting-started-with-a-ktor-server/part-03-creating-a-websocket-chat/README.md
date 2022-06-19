@@ -123,7 +123,7 @@ text 콘텐트만 받기 때문에 incoming channel에서 텍스트가 아닌 `F
 `fun main` 옆의 실행 아이콘을 눌러 서버를 실행하자. 이제 서비스를 확인하기 위해 Postman을 사용해 `ws://localhost:8080/chat`에 연결하고 테스트해보자.
 
 <div align="center">
-<img src="img/part-03/postman.png" width="80%">
+<img src="img/postman.png" width="80%">
 </div>
 
 웹소켓을 통해 양방향 통신을 수행할 수 있다. 이제 여러 참가자를 허용하고 메시지를 공유하는 채팅 서버와 비슷하게 확장해보자.
@@ -191,8 +191,8 @@ collection의 `Connection` 객체를 제거한다. incoming channel이 close되�
 서버에서 동작이 제대로 수행되는 것을 확인하기 위해 Postman으로 확인해본다. username 할당과 연결된 유저에게 메시지를 브로드캐스팅 하는 것을 확인해보자. 2개의 클라이언트를 만들고 테스트한다.
 
 <div align="center" class="column">
-<div><img src="img/part-03/postman_test1.png" width="80%"></div>
-<div><img src="img/part-03/postman_test2.png" width="80%"></div>
+<div><img src="img/postman_test1.png" width="80%"></div>
+<div><img src="img/postman_test2.png" width="80%"></div>
 </div>
 
 이제 채팅에 참가한 여러 유저들이 메시지를 전송하고 받을 수 있다.
@@ -237,7 +237,7 @@ fun main() {
 확인해보자. `Allow parallel run`을 체크하여 여러 애플리케이션을 실행한다.
 
 <div align="center">
-<img src="img/part-03/parallel_run.png">
+<img src="img/parallel_run.png">
 </div>
 
 이 이슈를 더 좋은 방법으로 처리해보자.
@@ -318,7 +318,7 @@ fun main() {
 이제 WebSocket 기반 채팅 클라이언트를 만들었다. 채팅 서버를 실행시키고, 클라이언트 여러 개를 만들어 테스트해보자.
 
 <div align="center">
-<img src="img/part-03/result.gif">
+<img src="img/result.gif">
 </div>
 
 # **What's next**
