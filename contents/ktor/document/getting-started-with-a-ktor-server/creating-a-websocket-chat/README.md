@@ -33,7 +33,7 @@ ping/pong)이 있다. Ktor는 웹소켓 프로토콜을 통해 고차원의 추�
 
 ## Create a new Ktor project
 
-새로운 프로젝트를 생성하는 방법은 [여기서](contents/ktor/document/getting-started-with-a-ktor-server/creating-a-new-ktor-project) 확인한다.
+새로운 프로젝트를 생성하는 방법은 [여기서](/contents/ktor/document/getting-started-with-a-ktor-server/creating-a-new-ktor-project) 확인한다.
 
 플러그인의 경우 `Routing`, `WebSockets`을 추가한다.
 
