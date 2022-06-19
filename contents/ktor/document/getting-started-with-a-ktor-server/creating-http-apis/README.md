@@ -18,7 +18,7 @@
 
 ## Create a new Ktor project
 
-새로운 프로젝트를 생성하는 방법은 [여기서](contents/ktor/document/getting-started-with-a-ktor-server/creating-a-new-ktor-project) 확인한다.
+새로운 프로젝트를 생성하는 방법은 [여기서](/contents/ktor/document/getting-started-with-a-ktor-server/creating-a-new-ktor-project) 확인한다.
 
 플러그인의 경우 `Routing`, `ContentNegotiation`, `kotlinx.serialization`을 추가한다.
 
@@ -502,7 +502,7 @@ DELETE http://127.0.0.1:8080/customer/500
 `Application.kt` 파일을 열고 **Run** 아이콘을 클릭한다.
 
 <div align="center">
-<img src="img/run_server.png">
+<img src="img/run_server.png" width="80%">
 </div>
 
 서버가 실행되면 각 요청에 대해 실행할 수 있다.
