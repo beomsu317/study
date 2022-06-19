@@ -37,6 +37,8 @@ ping/pong)이 있다. Ktor는 웹소켓 프로토콜을 통해 고차원의 추�
 
 플러그인의 경우 `Routing`, `WebSockets`을 추가한다.
 
+## Examine the project
+
 ### Dependencies
 
 `build.gradle.kts`를 열고 추가된 디펜던시를 확인한다.
