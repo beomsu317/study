@@ -66,15 +66,15 @@ class MainActivity : ComponentActivity() {
             val viewModel: MainViewModel = viewModel()
             val uiState = viewModel.uiState.value
             Box(
-                    modifier = Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
             ) {
                 LazyColumn(modifier = Modifier.fillMaxSize()) {
                     items(uiState.items.size) {
                         Text(
-                                text = uiState.items[it].name,
-                                modifier = Modifier
-                                        .padding(15.dp)
+                            text = uiState.items[it].name,
+                            modifier = Modifier
+                                .padding(15.dp)
                         )
                     }
                 }
@@ -86,7 +86,7 @@ class MainActivity : ComponentActivity() {
                 when (uiState.error) {
                     MainViewModel.UiState.Error.NetworkError -> {
                         Text(
-                                text = stringResource(id = R.string.error_network), color =
+                            text = stringResource(id = R.string.error_network)
                         )
                     }
                     MainViewModel.UiState.Error.InputEmpty -> {
@@ -112,20 +112,20 @@ class MainRepository {
                 throw Exception()
             }
             Resource.Success(
-                    listOf(
-                            Person(
-                                    name = "Chris P. Bacon",
-                                    isMale = true
-                            ),
-                            Person(
-                                    name = "Anita Hanjaab",
-                                    isMale = false
-                            ),
-                            Person(
-                                    name = "Mia khalifa",
-                                    isMale = false
-                            ),
-                    )
+                listOf(
+                    Person(
+                        name = "Chris P. Bacon",
+                        isMale = true
+                    ),
+                    Person(
+                        name = "Anita Hanjaab",
+                        isMale = false
+                    ),
+                    Person(
+                        name = "Mia khalifa",
+                        isMale = false
+                    ),
+                )
             )
         } catch (e: Exception) {
             Resource.Error("Network error")
@@ -151,7 +151,7 @@ sealed class Resource<T>(val data: T? = null, val message: String? = null) {
 
 ```kotlin
 class MainViewModel(
-        val repository: MainRepository
+    val repository: MainRepository
 ) : ViewModel() {
 
     private val _uiState = mutableStateOf(UiState())
@@ -184,9 +184,9 @@ class MainViewModel(
     // 위의 sealed class로 구현하게 되면 하나의 상태에 국한되지만, 아래의 data class로 구현하면 여러 상태를 표현할 수 있다.
     // 예를 들어, 캐싱 레이어가 있다고 가정하고 네트워크 연결이 되어있지 않은 상태에서 DB에 캐싱된 데이터를 가져온다고 하자. 그렇게 되면 에러와 아이템을 같이 보여주어야 한다.
     data class UiState(
-            val isLoading: Boolean = false,
-            val error: Error? = null,
-            val items: List<Person> = listOf()
+        val isLoading: Boolean = false,
+        val error: Error? = null,
+        val items: List<Person> = listOf()
     ) {
         sealed class Error {
             // stringResource에서 오류 메시지를 얻어야 하므로 sealed class로 전달
@@ -202,8 +202,8 @@ class MainViewModel(
 
 ```kotlin
 data class Person(
-        val name: String,
-        val isMale: Boolean
+    val name: String,
+    val isMale: Boolean
 )
 ```
 
@@ -211,8 +211,8 @@ data class Person(
 
 ```kotlin
 data class Person(
-        val name: String,
-        val gender: Gender = Gender.Male
+    val name: String,
+    val gender: Gender = Gender.Male
 ) {
     sealed class Gender() {
         object Male : Gender()

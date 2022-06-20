@@ -368,7 +368,7 @@ UI에서 넘어와야하는 `coinId`가 있다. `SavedStateHandle`을 통해 `co
 ```kotlin
 object Constants {
 
-    ...
+    // ...
 
     const val PARAM_COIN_ID = "coinid"
 }

@@ -155,7 +155,7 @@ fun <T> LiveData<T>.getOrAwaitValue(
 
 위 테스트를 실행하게 되면, 다음 에러가 발생하게 된다. 이는 테스트 케이스에서 LiveData의 값을 받기 전 테스트가 종료되는 문제이다.
 
-```kotlin
+```
 java.lang.IllegalStateException: This job has not completed yet
 ```
 

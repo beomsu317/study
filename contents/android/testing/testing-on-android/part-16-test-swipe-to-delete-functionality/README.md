@@ -165,7 +165,7 @@ class ShoppingFragmentTest {
         hiltRule.inject()
     }
 
-		...
+	// ...
     @Test
     fun swipeShoppingItem_deleteItemInDb() {
         val shoppingItem = ShoppingItem("TEST", 1, 1f, "TEST", 1)

@@ -10,7 +10,7 @@ start와 end state를 설정해야 한다.
 
 Constraints sets를 설정해주기 위해 res에 raw 디렉토리를 생성하고 motion_scene.json5 파일을 생성한다.
 
-```json
+```json5
 {
   ConstraintSets: {
     start: {
@@ -147,9 +147,9 @@ fun ProfileHeader(progress: Float) {
 
 프로필과 이름이 살짝 겹치는 이슈가 있다. 이를 해결하기 위해 KeyFrame을 사용한다. `username` 타겟을 지정하고 50% 프레임에서 120까지 이동하도록 한다. 그럼 더 이상 겹치지 않는 것을 확인할 수 있다.
 
-```json
+```json5
 {
-  ...
+  // ...
   Transitions: {
     default: {
       from: 'start',
@@ -179,9 +179,9 @@ fun ProfileHeader(progress: Float) {
 
 `rotationZ`를 설정하면 다음과 같은 모션도 만들 수 있다.
 
-```json
+```json5
 {
-  ...
+  // ...
   Transitions: {
     default: {
       from: 'start',
@@ -212,7 +212,7 @@ fun ProfileHeader(progress: Float) {
 
 이제 색상을 적용해야 하는데 `custom` 속성을 이용해 적용할 수 있다.
 
-```json
+```json5
 {
   ConstraintSets: {
     start: {
@@ -225,7 +225,7 @@ fun ProfileHeader(progress: Float) {
           background: '#08FF04'
         }
       },
-      ...
+      // ...
     },
     end: {
       profile_pic: {
@@ -238,10 +238,10 @@ fun ProfileHeader(progress: Float) {
           background: '#FFFFFF'
         }
       },
-      ...
+      // ...
     }
   },
-  ...
+  // ...
 }
 ```
 

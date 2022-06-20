@@ -12,8 +12,8 @@
 
 ```kotlin
 val persons = listOf(
-    Person("Philipp", 23)
-    Person("Chris", 27)
+    Person("Philipp", 23),
+    Person("Chris", 27),
     Person("John", 56)
 )
 

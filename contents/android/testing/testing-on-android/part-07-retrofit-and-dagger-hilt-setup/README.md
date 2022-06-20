@@ -96,7 +96,6 @@ class ShoppingApplication: Application() {
         android:name=".ShoppingApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        ...
         >
 </application>
 ```

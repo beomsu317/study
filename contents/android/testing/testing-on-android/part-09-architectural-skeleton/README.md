@@ -100,7 +100,7 @@ object Constants {
 @Module
 @InstallIn(ApplicationComponent::class)
 object AppModule {
-		...
+    // ...
     @Singleton
     @Provides
     fun provideDeafultShoppingRepository(
