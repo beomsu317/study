@@ -226,7 +226,7 @@ class MainActivity : ComponentActivity() {
             Box(
                 modifier = Modifier.fillMaxSize()
             ) {
-                ImagePreview(image = )
+                ImagePreview(image = image)
             }
         }
     }
