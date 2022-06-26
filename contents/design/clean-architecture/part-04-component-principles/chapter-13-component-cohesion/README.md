@@ -3,7 +3,7 @@
 여기선 다음 세 가지 원칙을 논의한다.
 
 * REP(Reuse/Release Equivalence Principle): 재사용/릴리즈 등가 원칙
-* 폐(Common Closure Principle): 공통 폐쇄 원칙
+* CCP(Common Closure Principle): 공통 폐쇄 원칙
 * CRP(Common Reuse Principle): 공통 재사용 원칙
 
 ## REP: 재사용/릴리즈 등가 원칙
