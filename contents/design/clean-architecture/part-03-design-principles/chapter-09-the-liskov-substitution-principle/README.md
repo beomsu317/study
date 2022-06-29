@@ -26,11 +26,11 @@ LSP를 위반하는 문제로 정사각형/직사각형 문제가 있다.
 ```
 Rectangle r = ...
 r.setW(5);
-r.setH(52);
+r.setH(2);
 assert(r.area() == 10)
 ```
 
-여기서 Square를 생성하면 assert는 실패한다. 이를 막기 위해 if 문 등을 이용해 Rectangle이 실제 Square인지 검사하는 메커니즘을 User에 추가하는 것이다. 하지만 User의 행위가 사용하는
+...에서 Square를 생성한다면 assert는 실패한다. 이를 막기 위해 if 문 등을 이용해 Rectangle이 실제 Square인지 검사하는 메커니즘을 User에 추가하는 것이다. 하지만 User의 행위가 사용하는
 타입에 의존하게 되므로 결국 타입을 서로 치환할 수 없게 된다.
 
 ## LSP와 아키텍처
