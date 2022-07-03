@@ -10,7 +10,7 @@
 가장 단순한 설계 방식은 전통적인 수평 계층형 아키텍처다. 해당 코드가 하는 일에 기반해 그 코드를 분할한다. 이러한 방식을 `계층 기반 패키지`라 부른다.
 
 <div align="center">
-<img src="img/package_by_layer.png" width="50%">
+<img src="img/package_by_layer.png" width="30%">
 </div>
 
 이 전형적인 계층형 아키텍처에는 웹, `업무 규칙`, 영속성 코드를 위해 계층이 각각 하나씩 존재한다. `엄격한 계층형 아키텍처`의 경우 계층은 반드시 바로 아래 계층에만 의존해야 한다.
@@ -33,7 +33,7 @@
 레포지토리가 아니라 주문과 관련한 무언가를 한다는 것을 볼 수 있다.
 
 <div align="center">
-<img src="img/package_by_feature.png" width="50%">
+<img src="img/package_by_feature.png" width="30%">
 </div>
 
 또 다른 이점으로, `주문 조회하기` 유스케이스가 변경될 경우 변경해야 할 코드를 모두 찾는 작업이 더 쉬워질 것이다. 변경해야 할 코드가 한 패키지에 담겨 있기 때문이다. 하지만 지금까지 설명한 두 접근법 모두
@@ -53,7 +53,7 @@
 다음은 `주문 조회하기` 유스케이스를 이 방식으로 구현한 모습이다.
 
 <div align="center">
-<img src="img/view_orders_use_case.png" width="50%">
+<img src="img/view_orders_use_case.png" width="30%">
 </div>
 
 com.mycompany.myapp.domain 패키지가 `내부`이며, 나머지 패키지는 `외부`이다. `내부`를 향해 흐르는 모습에 주목해라. OrdersRepository가 Orders라는 간단한 이름으로 바뀐
@@ -72,7 +72,7 @@ com.mycompany.myapp.domain 패키지가 `내부`이며, 나머지 패키지는 `
 같다.
 
 <div align="center">
-<img src="img/relaxed_layerd_architecture.png" width="50%">
+<img src="img/relaxed_layerd_architecture.png" width="30%">
 </div>
 
 이러한 조직화는 인접한 계층(들)을 건너뛰는 일이 허용되기 때문에 흔히 완화된 계층형 아키텍처(relaxed layered architecture)라 부른다. 경우에 따라 의도된 결과이기도 한데, 예를 들어
@@ -92,7 +92,7 @@ CQRS(Command Query Responsibility Segregation: 데이터를 변경하고 조회�
 마찬가지로, 컴포넌트 기반 패키지에서도 사용자 인터페이스를 큰 단위의 컴포넌트로부터 분리해서 유지한다. 다음은 `주문 조회하기` 유스케이스가 어떤 모습인지 보여준다.
 
 <div align="center">
-<img src="img/view_orders_use_case2.png" width="50%">
+<img src="img/view_orders_use_case2.png" width="30%">
 </div>
 
 본질적으로 이 접근법에서는 `업무 로직`과 영속성 관련 코드를 하나로 묶는데, 이 묶음을 `컴포넌트`라 부른다.
