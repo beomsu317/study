@@ -636,7 +636,7 @@ fun WeatherForecast(
 ```
 
 <div align="center">
-<img src="img/result.png" width="40%">
+<img src="img/result.gif" width="40%">
 </div>
 
 ## References
