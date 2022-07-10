@@ -26,10 +26,10 @@ int fileAgeInDays;
 다음 코드는 무엇을 의미할까?
 
 ```java
-public List<int[]>getThem() {
-    List<int[]>list1=new ArrayList<int[]>();
-    for(int[]x:theList)
-        if(x[0]==4)
+public List<int[]> getThem() {
+    List<int[]> list1 = new ArrayList<int[]>();
+    for(int[] x:theList)
+        if(x[0] == 4)
             list1.add(x);
     return list1;
 }
@@ -48,10 +48,10 @@ public List<int[]>getThem() {
 각 개념에 이름만 붙여도 코드가 상당히 나아진다.
 
 ```java
-public List<int[]>getFlaggedCells() {
-    List<int[]>flaggedCells=new ArrayList<int[]>();
-    for(int[]cell:gameBoard)
-        if(cell[STATUS_VALUE]==FLAGGED)
+public List<int[]> getFlaggedCells() {
+    List<int[]> flaggedCells = new ArrayList<int[]>();
+    for(int[] cell:gameBoard)
+        if(cell[STATUS_VALUE] == FLAGGED)
             flaggedCells.add(cell);
     return flaggedCells;
 }
@@ -61,7 +61,7 @@ int 배열을 사용하는 대신, 칸을 간단한 클래스로 만들고, `isF
 
 ```java
 public List<Cell> getFlaggedCells() {
-    List<Cell> flaggedCells=new ArrayList<Cell>();
+    List<Cell> flaggedCells = new ArrayList<Cell>();
     for(Cell cell:gameBoard)
         if(cell.isFlagged())
             flaggedCells.add(cell);
