@@ -575,7 +575,7 @@ this.pngBytes = new byte[((this.width + 1) * this.height * 3) + 200];
 
 ### 예제
 
-다음은 필자가 XP 몰입(Immersion) 강의에서 짰던 모듈이다. 바람직하지 못한 주석을 직접 찾아보자.
+다음은 코드에서 바람직하지 못한 주석을 직접 찾아보자.
 
 ```java
 /**
