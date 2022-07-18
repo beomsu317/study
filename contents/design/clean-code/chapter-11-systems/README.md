@@ -44,7 +44,7 @@ public Service getService() {
 
 ### Main 분리
 
-시스템 생성과 시스템 사용을 분리하는 한 가지 방법으로, 생성과 관련한 코드는 모두 `main`이나 `main`이 호출하는 모듈로 옮기곡, 나머지 시스템은 모든 객체가 생성되었고 모든 의존성이 연결되어 있다고 가정한다.
+시스템 생성과 시스템 사용을 분리하는 한 가지 방법으로, 생성과 관련한 코드는 모두 `main`이나 `main`이 호출하는 모듈로 옮기고, 나머지 시스템은 모든 객체가 생성되었고 모든 의존성이 연결되어 있다고 가정한다.
 
 <div align="center">
 <img src="img/separating_construction_in_main.png" width="80%">
@@ -118,7 +118,8 @@ public interface BankLocal extends java.ejb.EJBLocalObject {
     void setState(String state) throws EJBException;
     void setZipCode(String zip) throws EJBException;
     Collection getAccounts() throws EJBException;
-    void setAccounts(Collection accounts) throws EJBException; void addAccount(AccountDTO accountDTO) throws EJBException;
+    void setAccounts(Collection accounts) throws EJBException; 
+    void addAccount(AccountDTO accountDTO) throws EJBException;
 }
 ```
 
@@ -171,7 +172,7 @@ public abstract class Bank implements javax.ejb.EntityBean {
 
 마지막으로 영구 저장소에서 객체와 관계형 데이터가 매핑되는 방식, 원하는 트랜잭션 동작 방식, 보안 제약조건 등이 들어가는 XML deployment descriptors를 작성해야 한다.
 
-비즈니스 논리는 EJB2 애플리케이션 `컨테이너`에 강하게 결합된다. 클래스를 생성할 때는 컨테이너에서 파생해야 하며 컨테이너가 요구하는 다양한 생명주기 메서드도 제공해야 한다.
+비즈니스 로직은 EJB2 애플리케이션 `컨테이너`에 강하게 결합된다. 클래스를 생성할 때는 컨테이너에서 파생해야 하며 컨테이너가 요구하는 다양한 생명주기 메서드도 제공해야 한다.
 
 이렇듯 비즈니스 논리가 덩치 큰 컨테이너와 밀접하게 결합된 탓에 독자적인 단위 테스트가 어렵다. 따라서 EJB2 코드는 프레임워크 밖에서 재사용하기란 사실상 불가능하다.
 
@@ -189,7 +190,7 @@ EJB2 아키텍처는 일부 영역에서 관심사를 거의 완벽하게 분리
 두 영역이 세밀한 단위로 겹친다는 점이다.
 
 사실 EJB 아키텍처가 영속성, 보안, 트랜잭션을 처리하는 방식은 AOP(Aspect-Oriented Programming)을 예견했다고 보인다. AOP는 횡단 관심사에 대처해 모듈성을 확보하는 일반적인 방법론이다.
-AOP에서 관점(Aspect)라는 모듈 구성 개념은 `특정 관심사를 지원하려면 시스템에서 특정 지점들이 동작하는 방식을 일관성 있게 바꿔야 한다`라고 명시한다. 명시는 간결한 선언이나 프로그래밍
+AOP에서 관점(Aspect)이라는 모듈 구성 개념은 `특정 관심사를 지원하려면 시스템에서 특정 지점들이 동작하는 방식을 일관성 있게 바꿔야 한다`라고 명시한다. 명시는 간결한 선언이나 프로그래밍
 메커니즘으로 수행한다.
 
 영속성을 예로 들면, 프로그래머는 영속적으로 저장할 객체와 속성을 선언한 후 영속성 책임을 영속성 프레임워크에 위임한다. 그러면 AOP 프레임워크는 대상 코드에 영향을 미치지 않는 상태로 동작 방식을
@@ -346,15 +347,18 @@ public class Bank implements java.io.Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @Embeddable // An object “inlined” in Bank’s DB row public class Address {
-    protected String streetAddr1;
-    protected String streetAddr2;
-    protected String city;
-    protected String state;
-    protected String zipCode;
-}
+    @Embeddable // An object “inlined” in Bank’s DB row 
+    public class Address {
+        protected String streetAddr1;
+        protected String streetAddr2;
+        protected String city;
+        protected String state;
+        protected String zipCode;
+    }
+    
     @Embedded
     private Address address;
+    
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "bank")
     private Collection<Account> accounts = new ArrayList<Account>();
 
