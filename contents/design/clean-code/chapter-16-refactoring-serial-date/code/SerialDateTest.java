@@ -25,14 +25,14 @@
  * in the United States and other countries.]
  *
  * --------------------
- * SerialDateTests.java
+ * SerialDateTest.java
  * --------------------
  * (C) Copyright 2001-2005, by Object Refinery Limited.
  *
  * Original Author: David Gilbert (for Object Refinery Limited);
  * Contributor(s): -;
  *
- * $Id: SerialDateTests.java,v 1.6 2005/11/16 15:58:40 taqua Exp $
+ * $Id: SerialDateTest.java,v 1.6 2005/11/16 15:58:40 taqua Exp $
  *
  * Changes
  * -------
