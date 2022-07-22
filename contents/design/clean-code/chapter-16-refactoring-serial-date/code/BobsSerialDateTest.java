@@ -1,8 +1,10 @@
 package org.jfree.date.junit;
 
 import junit.framework.TestCase;
+
 import static clean.code.chapter16.original.SerialDate.*;
 import static clean.code.chapter16.original.MonthConstants.*;
+
 import java.util.*;
 
 public class BobsSerialDateTest extends TestCase {

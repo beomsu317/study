@@ -310,7 +310,6 @@ public abstract class SerialDate implements Comparable,
             }
         }
         return result;
-
     }
 
     /**
