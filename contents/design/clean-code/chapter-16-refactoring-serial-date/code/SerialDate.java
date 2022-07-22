@@ -84,7 +84,7 @@ import static clean.code.chapter16.original.MonthConstants.*;
  * @author David Gilbert
  */
 public abstract class SerialDate implements Comparable,
-        Serializable {
+        Serializable, MonthConstants {
 
     /**
      * For serialization.
