@@ -21,7 +21,7 @@ public class BobsSerialDateTest extends TestCase {
         assertEquals(-1, stringToWeekdayCode("Hello"));
         assertEquals(MONDAY, stringToWeekdayCode("Monday"));
         assertEquals(MONDAY, stringToWeekdayCode("Mon"));
-        //todo    assertEquals(MONDAY,stringToWeekdayCode("monday"));
+        // todo assertEquals(MONDAY,stringToWeekdayCode("monday"));
         //    assertEquals(MONDAY,stringToWeekdayCode("MONDAY"));
         //    assertEquals(MONDAY, stringToWeekdayCode("mon"));
 
@@ -151,7 +151,7 @@ public class BobsSerialDateTest extends TestCase {
         assertEquals(NOVEMBER, stringToMonthCode("11"));
         assertEquals(DECEMBER, stringToMonthCode("12"));
 
-        //todo    assertEquals(-1, stringToMonthCode("0"));
+        // todo assertEquals(-1, stringToMonthCode("0"));
         //     assertEquals(-1, stringToMonthCode("13"));
 
         assertEquals(-1, stringToMonthCode("Hello"));
@@ -338,7 +338,7 @@ public class BobsSerialDateTest extends TestCase {
         assertEquals(d(23, APRIL, 2006), getNearestDayOfWeek(SUNDAY, d(21, APRIL, 2006)));
         assertEquals(d(23, APRIL, 2006), getNearestDayOfWeek(SUNDAY, d(22, APRIL, 2006)));
 
-        //todo    assertEquals(d(17, APRIL, 2006), getNearestDayOfWeek(MONDAY, d(16, APRIL, 2006)));
+        // todo assertEquals(d(17, APRIL, 2006), getNearestDayOfWeek(MONDAY, d(16, APRIL, 2006)));
         assertEquals(d(17, APRIL, 2006), getNearestDayOfWeek(MONDAY, d(17, APRIL, 2006)));
         assertEquals(d(17, APRIL, 2006), getNearestDayOfWeek(MONDAY, d(18, APRIL, 2006)));
         assertEquals(d(17, APRIL, 2006), getNearestDayOfWeek(MONDAY, d(19, APRIL, 2006)));
@@ -417,7 +417,7 @@ public class BobsSerialDateTest extends TestCase {
         assertEquals("Fourth", weekInMonthToString(FOURTH_WEEK_IN_MONTH));
         assertEquals("Last", weekInMonthToString(LAST_WEEK_IN_MONTH));
 
-        //todo    try {
+        // todo try {
         //      weekInMonthToString(-1);
         //      fail("Invalid week code should throw exception");
         //    } catch (IllegalArgumentException e) {
@@ -429,7 +429,7 @@ public class BobsSerialDateTest extends TestCase {
         assertEquals("Nearest", relativeToString(NEAREST));
         assertEquals("Following", relativeToString(FOLLOWING));
 
-        //todo    try {
+        // todo try {
         //      relativeToString(-1000);
         //      fail("Invalid relative code should throw exception");
         //    } catch (IllegalArgumentException e) {
