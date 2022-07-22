@@ -65,7 +65,9 @@ import org.jfree.date.SerialDate;
  */
 public class SerialDateTests extends TestCase {
 
-    /** Date representing November 9. */
+    /**
+     * Date representing November 9.
+     */
     private SerialDate nov9Y2001;
 
     /**
@@ -277,11 +279,11 @@ public class SerialDateTests extends TestCase {
             out.writeObject(d1);
             out.close();
 
-            ObjectInput JavaDoc in = new ObjectInputStream JavaDoc(new ByteArrayInputStream JavaDoc(buffer.toByteArray()));
+            ObjectInput JavaDoc in = new ObjectInputStream
+            JavaDoc(new ByteArrayInputStream JavaDoc(buffer.toByteArray()));
             d2 = (SerialDate) in.readObject();
             in.close();
-        }
-        catch (Exception JavaDoc e) {
+        } catch (Exception JavaDoc e){
             System.out.println(e.toString());
         }
         assertEquals(d1, d2);
