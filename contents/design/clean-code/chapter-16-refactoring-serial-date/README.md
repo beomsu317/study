@@ -11,7 +11,7 @@
 그래서 코드 커버리지 분석 도구인 클로버(Clover)를 이용해 유닛 테스트가 실행하는 코드와 실행하지 않는 코드를 조사했다. 대략 50% 정도였다. 그래서 독자적으로 유닛 테스트 케이스를 구현했다.
 구현한 테스트 케이스에는 많은 코드가 주석으로 처리되었다. 이들은 실패한 테스트 케이스들이지만, 마땅히 통과해야 한다고 여겨지는 테스트 케이스다. 
 
-[testStringToWeekdayCode](https://github.com/beomsu317/study/blob/main/contents/design/clean-code/chapter-16-refactoring-serial-date/code/BobsSerialDateTest.java#L17)
+[testStringToWeekdayCode](https://github.com/beomsu317/study/blob/main/contents/design/clean-code/chapter-16-refactoring-serial-date/code/BobsSerialDateTest.java#L19)
 의 경우 대소문자 구문 없이 모두 통과해야 했다. `SerialDate.java`의 303행과 307행을 `s.equalsIgnoreCase`로 바꾸면 충분하다. 
 
 `BobsSerialDateTest.java`의 33행과 46행은 주석으로 남겼는데, `tues`와 `thurs`라는 약어를 지원해야 할지가 분명치 않아서다.
